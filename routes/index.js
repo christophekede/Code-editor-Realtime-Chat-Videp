@@ -1,5 +1,8 @@
-const health = require("./controllers/appHealth/health")
 const { Router } = require("express")
+
+const health = require("./controllers/appHealth/health")
+const contact = require("./controllers/contact")
+
 
 
 
@@ -11,6 +14,7 @@ const routes = () => {
   })
 
   health(appRouter)
+  contact(appRouter)
 
   return appRouter
 
