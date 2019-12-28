@@ -1,4 +1,6 @@
 const { Router } = require("express")
+const Mailer = require("../../../core/mailer/Mailer")
+
 
 const router = Router()
 
@@ -12,7 +14,20 @@ const contact = (appRouter) => {
 
 
   router.post("/", (req, res, next) => {
-    res.render("thankYou", { title: "Contact" })
+    const mailer = new Mailer()
+    const { name, email, message } = req.body
+    return res.render("thankYou")
+    return res.render("thankYou", { title: "Contact" })
+    // mailer.sendMail(email, "Contact", message)
+    //   .then(data => {
+    //     return res.render("thankYou", { title: "Contact" })
+    //   }).catch(err => {
+    //     let error = new Error("Service non disponible")
+    //     error.status = 400
+    //     next(error)
+    //   })
+
+
   })
 
 

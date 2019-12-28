@@ -20,7 +20,7 @@ const expressLoader = (app) => {
 
   app.use(cors())
   // parse various different custom JSON types as JSON
-  app.use(bodyParser.json());
+  app.use(bodyParser.urlencoded({ extended: false }));
 
 
   app.use("/", routes())
