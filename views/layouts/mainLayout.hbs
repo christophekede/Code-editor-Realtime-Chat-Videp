@@ -20,6 +20,28 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+
+    // Or with jQuery
+
+    $(document).ready(function () {
+      $('.sidenav').sidenav();
+    });
+    var mutationObserver = new MutationObserver(function (mutations) {
+      mutations.forEach(function (mutation) {
+        console.log(mutation);
+      });
+    });
+    mutationObserver.observe(document.documentElement, {
+  attributes: true,
+  characterData: true,
+  childList: true,
+  subtree: true,
+  attributeOldValue: true,
+  characterDataOldValue: true
+});
+
+  </script>
 
 </body>
 

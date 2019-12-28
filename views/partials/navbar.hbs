@@ -1,10 +1,22 @@
 <nav>
   <div class="nav-wrapper">
-    <a href="#" class="brand-logo">Logo</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
+    <a href="/" class="brand-logo center">Logo</a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down ">
+      <li><a href="/">Acceuil</a></li>
+      <li><a href="/about">A propos</a></li>
       <li><a href="/contact">Contact</a></li>
+    </ul>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="/login">Se Connecter</a></li>
+      <li><a href="/logout">Se déconnecter</a></li>
     </ul>
   </div>
 </nav>
+<ul class="sidenav" id="mobile-demo">
+  <li><a href="/">Acceuil</a></li>
+  <li><a href="/about">A propos</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li><a href="/login">Se Connecter</a></li>
+  <li><a href="/logout">Se déconnecter</a></li>
+</ul>

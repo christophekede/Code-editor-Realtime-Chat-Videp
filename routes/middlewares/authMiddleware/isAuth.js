@@ -1,7 +1,7 @@
 
 
 const isAuth = (req, res, next) => {
-  const authenticated = false
+  const authenticated = true
 
   if (authenticated) return next()
   let error = new Error("not auth")
